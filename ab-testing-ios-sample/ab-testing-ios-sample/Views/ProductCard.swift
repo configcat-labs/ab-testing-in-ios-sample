@@ -3,27 +3,19 @@
 //  ab-testing-ios-sample
 //
 //  Created by Chavez Harris on 10/21/22.
-//
 
 import Foundation
 import SwiftUI
 
-//Amplitude.instance.load()
-
 struct ProductCard: View {
-    
     var product: Product
     
     var body: some View {
-        
-       
-        
         VStack{
             Image(product.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 200, height: 300)
-            
             VStack{
                 Text(product.name)
                     .font(.title)
@@ -39,11 +31,16 @@ struct ProductCard: View {
                     .fontWeight(.bold)
                     .font(.system(size: 24))
                 Spacer()
-                Button("Buy Now") {}
-                    .buttonStyle(.bordered)
-                    .foregroundColor(.white)
-                    .background(Color.black)
-                    .cornerRadius(8)
+                Button {
+                    Ampli.instance.productTap()
+                } label: {
+                    Text("Buy Now")
+                }
+                .buttonStyle(.bordered)
+                .buttonStyle(.bordered)
+                .foregroundColor(.white)
+                .background(Color.black)
+                .cornerRadius(8)
             }
             .padding()
             Spacer()
@@ -56,6 +53,12 @@ struct ProductCard: View {
                 .padding([.all], -20)
         )
         .shadow(radius: 1)
+        .onAppear{
+            Ampli.instance.load(LoadOptions(
+            environment: AmpliEnvironment.production,
+            client: LoadClientOptions(apiKey: "2550487ccf158fe7927ecde7d9207d5b")))
+        }
+        
     }
 }
 
