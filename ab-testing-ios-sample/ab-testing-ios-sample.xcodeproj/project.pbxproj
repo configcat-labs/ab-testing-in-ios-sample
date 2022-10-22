@@ -14,6 +14,8 @@
 		1A9022BE2903869D00D3534A /* ab_testing_ios_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9022BD2903869D00D3534A /* ab_testing_ios_sampleTests.swift */; };
 		1A9022C82903869D00D3534A /* ab_testing_ios_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9022C72903869D00D3534A /* ab_testing_ios_sampleUITests.swift */; };
 		1A9022CA2903869D00D3534A /* ab_testing_ios_sampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9022C92903869D00D3534A /* ab_testing_ios_sampleUITestsLaunchTests.swift */; };
+		1A9022D82903873000D3534A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9022D72903873000D3534A /* Product.swift */; };
+		1A9022DB290389A000D3534A /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9022DA290389A000D3534A /* ProductCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		1A9022C32903869D00D3534A /* ab-testing-ios-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ab-testing-ios-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9022C72903869D00D3534A /* ab_testing_ios_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ab_testing_ios_sampleUITests.swift; sourceTree = "<group>"; };
 		1A9022C92903869D00D3534A /* ab_testing_ios_sampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ab_testing_ios_sampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A9022D72903873000D3534A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		1A9022DA290389A000D3534A /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		1A9022AB2903869B00D3534A /* ab-testing-ios-sample */ = {
 			isa = PBXGroup;
 			children = (
+				1A9022D92903898200D3534A /* Views */,
+				1A9022D62903870900D3534A /* Model */,
 				1A9022AC2903869B00D3534A /* ab_testing_ios_sampleApp.swift */,
 				1A9022AE2903869B00D3534A /* ContentView.swift */,
 				1A9022B02903869D00D3534A /* Assets.xcassets */,
@@ -125,6 +131,22 @@
 				1A9022C92903869D00D3534A /* ab_testing_ios_sampleUITestsLaunchTests.swift */,
 			);
 			path = "ab-testing-ios-sampleUITests";
+			sourceTree = "<group>";
+		};
+		1A9022D62903870900D3534A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A9022D72903873000D3534A /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A9022D92903898200D3534A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A9022DA290389A000D3534A /* ProductCard.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +281,8 @@
 			files = (
 				1A9022AF2903869B00D3534A /* ContentView.swift in Sources */,
 				1A9022AD2903869B00D3534A /* ab_testing_ios_sampleApp.swift in Sources */,
+				1A9022D82903873000D3534A /* Product.swift in Sources */,
+				1A9022DB290389A000D3534A /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
