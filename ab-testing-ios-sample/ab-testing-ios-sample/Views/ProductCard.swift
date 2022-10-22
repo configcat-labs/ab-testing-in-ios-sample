@@ -8,10 +8,16 @@
 import Foundation
 import SwiftUI
 
+//Amplitude.instance.load()
+
 struct ProductCard: View {
+    
     var product: Product
     
     var body: some View {
+        
+       
+        
         VStack{
             Image(product.image)
                 .resizable()
@@ -32,12 +38,17 @@ struct ProductCard: View {
                     .foregroundColor(.green)
                     .fontWeight(.bold)
                     .font(.system(size: 24))
-                    
+                Spacer()
+                Button("Buy Now") {}
+                    .buttonStyle(.bordered)
+                    .foregroundColor(.white)
+                    .background(Color.black)
+                    .cornerRadius(8)
             }
             .padding()
             Spacer()
         }
-        .frame(height: 400)
+        .frame(height: 500)
         .cornerRadius(8)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
