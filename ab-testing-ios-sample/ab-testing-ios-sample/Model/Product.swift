@@ -12,8 +12,9 @@ struct Product: Identifiable, Codable, Hashable {
     var name: String
     var description: String
     var price: String
+    var image: String
 }
 
 let products: [Product] = [
-    .init(id: 1, name: "Coffee Warmer", description: "Cofee and beverage warmer heating plate...", price: "$60.00")
+    .init(id: 1, name: "Coffee Warmer", description: "Electric Coffee Heating Plate...", price: "$60.00", image: "coffee-warmer")
 ]

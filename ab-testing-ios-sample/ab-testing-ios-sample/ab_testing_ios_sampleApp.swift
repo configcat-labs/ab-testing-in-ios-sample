@@ -11,7 +11,7 @@ import SwiftUI
 struct ab_testing_ios_sampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProductView()
         }
     }
 }
