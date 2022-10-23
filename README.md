@@ -14,7 +14,7 @@ Using this iOS app, I’ve demonstrated how to conduct an A/B testing experiment
 ### How to run the app
 
 1. Clone this repository
-2. Open the project with Xcode
+2. Open the `ab-testing-ios-sample.xcworkspace` file with Xcode
 3. You should be able to see a preview of the app by selecting **ProductView** in the left sidebar
 
 ![Screenshot of sample app](./screenshot.png)
