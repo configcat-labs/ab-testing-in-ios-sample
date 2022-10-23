@@ -9,7 +9,7 @@ Using this iOS app, I’ve demonstrated how to conduct an A/B testing experiment
 ### Prerequisites
 
 - A Mac computer
-- The latest version of XCode
+- The latest version of Xcode
 
 ### How to run the app
 
