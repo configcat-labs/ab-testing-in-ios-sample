@@ -1,0 +1,11 @@
+{
+  "Zone": "us",
+  "OrgId": "167669",
+  "WorkspaceId": "3b6e5ee3-4329-4025-a50a-ba0e20444bbc",
+  "SourceId": "41fc3f13-8a11-4768-8f6b-c0a2b85b35aa",
+  "Runtime": "ios:swift-ampli",
+  "Branch": "main",
+  "Version": "1.0.0",
+  "VersionId": "31a8b7a0-9a54-4a44-b07f-36aee61f966e",
+  "Path": "./Ampli"
+}
