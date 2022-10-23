@@ -1,8 +1,8 @@
-# Feature Flags in Swift IOS Sample
+# Feature Flags in Swift iOS Sample
 
 [Read the blog post here](https://configcat.com/blog/)
 
-Using this IOS app, I’ve demonstrated how to conduct an A/B testing experiment in Swift using feature flags. In the screenshot below. The purpose of this experiment is to determine whether changing the product price font color to red will increase sales. The article demonstrated how feature flags can streamline this process.
+Using this iOS app, I’ve demonstrated how to conduct an A/B testing experiment in Swift using feature flags. The purpose of this experiment is to determine whether changing the product price text color to red will increase sales. The article demonstrated how feature flags can streamline this process.
 
 ## Build & Run
 
