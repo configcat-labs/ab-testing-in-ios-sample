@@ -1,7 +1,0 @@
-platform :ios, '10.0'
-
-target 'ab-testing-ios-sample' do
-  use_frameworks!
-
-  pod 'Amplitude', "~> 8.10.0"
-end
