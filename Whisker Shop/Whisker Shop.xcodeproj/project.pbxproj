@@ -6,6 +6,11 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		29259BE730800C3F00DC7EF2 /* ConfigCat in Frameworks */ = {isa = PBXBuildFile; productRef = 29259BE630800C3F00DC7EF2 /* ConfigCat */; };
+		29259BF3308152CB00DC7EF2 /* AmplitudeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29259BF2308152CB00DC7EF2 /* AmplitudeSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* Whisker Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whisker Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -22,6 +27,8 @@
 		000000000000000130000000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				29259BF3308152CB00DC7EF2 /* AmplitudeSwift in Frameworks */,
+				29259BE730800C3F00DC7EF2 /* ConfigCat in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -60,6 +67,10 @@
 				000000000000000000000010 /* Whisker Shop */,
 			);
 			name = "Whisker Shop";
+			packageProductDependencies = (
+				29259BE630800C3F00DC7EF2 /* ConfigCat */,
+				29259BF2308152CB00DC7EF2 /* AmplitudeSwift */,
+			);
 			productName = MyApp;
 			productReference = 000000000000000000000120 /* Whisker Shop.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +99,10 @@
 			);
 			mainGroup = 000000000000000000000001;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				29259BE530800C3F00DC7EF2 /* XCRemoteSwiftPackageReference "swift-sdk" */,
+				29259BF1308152CB00DC7EF2 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */,
+			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 000000000000000000000020 /* Products */;
 			projectDirPath = "";
@@ -349,6 +364,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29259BE530800C3F00DC7EF2 /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/configcat/swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.1;
+			};
+		};
+		29259BF1308152CB00DC7EF2 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amplitude/Amplitude-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29259BE630800C3F00DC7EF2 /* ConfigCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29259BE530800C3F00DC7EF2 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = ConfigCat;
+		};
+		29259BF2308152CB00DC7EF2 /* AmplitudeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29259BF1308152CB00DC7EF2 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */;
+			productName = AmplitudeSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 000000000000000000000000 /* Project object */;
 }

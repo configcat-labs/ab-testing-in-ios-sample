@@ -1,7 +1,21 @@
 import SwiftUI
+import ConfigCat
+import AmplitudeSwift
 
 struct ProductView: View {
     var product: Product
+    var amplitude: Amplitude
+    @State private var featureFlag: FeatureFlag
+    
+    init(
+        product: Product,
+        configCatClient: ConfigCatClient,
+        amplitude: Amplitude
+    ) {
+        self.product = product
+        self.amplitude = amplitude
+        _featureFlag = State(wrappedValue: FeatureFlag(client: configCatClient))
+    }
 
     var body: some View {
         VStack(spacing: 16) {
@@ -21,12 +35,17 @@ struct ProductView: View {
                 .foregroundColor(.secondary)
 
             Text(product.price)
-                .foregroundColor(.green)
+                .foregroundColor(
+                    // Update the price text color based on the feature flag's value
+                    featureFlag.isFeatureFlagEnabled ? .red : .green
+                )
                 .font(.system(size: 24))
                 .fontWeight(.bold)
 
             Button {
-                // Buy action
+                amplitude.track(eventType: "Price Text Color", eventProperties: [
+                    "priceTextColor": featureFlag.isFeatureFlagEnabled ? "red" : "green"
+                ])
             } label: {
                 Text("Buy Now")
                     .frame(maxWidth: .infinity)
@@ -50,15 +69,8 @@ struct ProductView: View {
         }
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .shadow(radius: 1)
-        .onAppear {
-            // TODO: Load Amplitude instance here
+        .task {
+            await featureFlag.start()
         }
-    }
-}
-
-struct ProductView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductView(product: products[0])
-                .previewLayout(.fixed(width: 300, height: 510))
     }
 }
